@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Final Project">
+    <meta name="author" content="Hanwool Ryu">
+
+    <title>Final</title>
+
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <!-- towels -->
+    <div class="towels">
+        <img src="images/yellow-towel.png" alt="yellow towel" class="yellow-towel" />
+        <img src="images/red-towel.png" alt="red towel" class="red-towel" />
+    </div>
+
+    <!-- washing machine -->
+    <div class="machine">
+
+        <!-- play section -->
+        <div class="play-section">
+            <div class="detergent-container">
+                <div id="detergent"></div>
+            </div>
+            <div class="buttons-container">
+                <button class="previous-button" onclick="goPrevious()">
+                    <img src="images/previous.png" alt="previous" style="width: 20px;" />
+                </button>
+                <button id="play-button" onclick="play()">
+                    <img src="images/play.png" alt="play" style="width: 20px;" />
+                </button>
+                <button id="pause-button" onclick="pause()">
+                    <img src="images/pause.png" alt="pause" style="width: 20px;" />
+                </button>
+                <button class="next-button" onclick="goNext()">
+                    <img src="images/next.png" alt="next" style="width: 20px;" />
+                </button>
+                <input type="range" min="1" max="100" value="50" id="volume-bar" oninput="setVolume()">
+            </div>
+        </div>
+
+        <!-- washing section -->
+        <div class="washing-section">
+            <div class="washing-lid">
+                <div class="washing-lid-2">
+                    <div class="water-container">
+                        <img src="images/wave1.png" alt="wave1" id="wave1" />
+                        <img src="images/wave2.png" alt="wave2" id="wave2" />
+                        <img src="images/wave3.png" alt="wave3" id="wave3" />
+                    </div>
+                </div>
+            </div>
+            <div class="washing-lid-shadow"></div>
+            <div class="washing-lid-handle"></div>
+            <div class="washing-lid-handle-shadow"></div>
+        </div>
+        <div class="line"></div>
+    </div>
+
+    <!-- detergent -->
+    <div class="liquid-detergent">
+        <img src="images/detergent.png" alt="detergent" style="width: 100px;" />
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,220 @@
+/* general */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333333;
+    height: 100vh;
+}
+
+/* towels */
+.towels {
+    width: 180px;
+    margin-top: 450px;
+    margin-right: 30px;
+}
+
+.yellow-towel, .red-towel {
+    width: 180px;
+    height: 50px;
+}
+
+/* washing machine */
+.machine {
+    width: 430px;
+    height: 550px;
+    background-color: #becccc;
+}
+
+/* play section */
+.play-section {
+    display: flex;
+    flex-direction: row;
+    width: 430px;
+    height: 100px;
+    background-color: #e2e8e8;
+    margin-top: 50px;
+    border: 3px solid #90a1a5;
+}
+
+.detergent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+}
+
+#detergent {
+    text-align: center;
+    color: #ffffff;
+    font-size: 30px;
+    padding-top: 4px;
+    background-color: #333333;
+    width: 95px;
+    height: 45px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    border-left: 3px solid #90a1a5;
+}
+
+.previous-button, #play-button, #pause-button, .next-button {
+    background-color: #575f72;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;  
+    margin-right: 10px; 
+    outline: none; 
+}
+
+.next-button {
+    margin-right: -10px !important;
+}
+
+#play-button {
+    display: block;
+}
+
+#pause-button {
+    display: none;
+}
+
+.previous-button:hover, #play-button:hover, #pause-button:hover, .next-button:hover {
+    background-color: #000000;
+}
+
+#volume-bar {
+    width: 70px;
+    height: 7px;
+    background-color: #809399;
+    transform: rotate(-90deg);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    margin-right: -30px;
+}
+
+#volume-bar::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #575f72;
+    cursor: pointer;
+}
+
+/* washing section */
+.washing-section {
+    display: flex;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.washing-lid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    background-color: #d5dedd;
+    z-index: 2;
+}
+
+.washing-lid-shadow {
+    position: absolute;
+    background-color: #9cb2b1;
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    z-index: 0;
+}
+
+.washing-lid-handle {
+    width: 50px;
+    height: 120px;
+    background-color: #d5dedd;
+    border-radius: 40%;
+    z-index: 1;
+    margin-left: -40px;
+}
+
+.washing-lid-handle-shadow {
+    width: 50px;
+    height: 120px;
+    background-color: #9cb2b1;
+    border-radius: 40%;
+    z-index: 0;
+    margin-left: -40px;
+}
+
+.washing-lid-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: #81949a;
+    z-index: 2;
+}
+
+.water-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 170px;
+    height: 170px;
+    border-radius: 100%;
+    background-color: #406079;
+    overflow: hidden;
+}
+
+#wave1, #wave2, #wave3 {
+    width: 170px;
+    height: 170px;
+    animation: rotateWater 5s infinite;
+    -moz-animation: rotateWater 5s infinite;
+    -webkit-animation: rotateWater 5s infinite;
+    transform: translateZ(0);
+}
+
+.line {
+    width: 100%;
+    border-bottom: 2px solid #dfe6e6;
+    border-top: 2px solid #90a1a5;
+    margin-bottom: 40px;
+}
+
+@keyframes rotateWater {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* detergent */
+.liquid-detergent {
+    margin-top: 400px;
+    margin-left: 35px;
+}
